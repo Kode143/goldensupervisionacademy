@@ -92,7 +92,8 @@ var responsiveSlider = function() {
     .then(() => {
       contactForm.style.display = 'none';
       thankYouMessage.style.display = 'block';
-      thankYouMessage.style.height = '400px';
+      thankYouMessage.style.height = '300px';
+      thankYouMessage.style.fontSize = '900px';
     })
     .catch((error) => {
       console.error(error);
