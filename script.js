@@ -77,23 +77,27 @@ var responsiveSlider = function() {
   }
 
   // submiting contact form
-  function submitForm(event) {
-    event.preventDefault();
-    var form = document.forms['contact'];
-    var data = new FormData(form);
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', form.action);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        var messageContainer = document.getElementById('message-container');
-        if (xhr.status === 200) {
-          messageContainer.innerHTML = 'Message sent successfully!';
-          messageContainer.style.color = 'green';
-        } else {
-          messageContainer.innerHTML = 'Failed to send message. Please try again.';
-          messageContainer.style.color = 'red';
-        }
+  document.querySelector('#contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = e.target;
+    var formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json'
+      },
+      body: formData
+    })
+    .then(function(response) {
+      if (response.ok) {
+        form.style.display = 'none';
+        document.querySelector('#contact-message').style.display = 'block';
+      } else {
+        alert('An error occurred. Please try again.');
       }
-    };
-    xhr.send(data);
-  }
+    })
+    .catch(function(error) {
+      console.error(error);
+      alert('An error occurred. Please try again.');
+    });
+  });
