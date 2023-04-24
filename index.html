@@ -157,7 +157,7 @@
       <div class="col-md-6 ms-0 p-lg-2">
         <div class="contact-us">
           <h2>Contact Form</h2>
-          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="submitForm(event)">
             <input type="hidden" name="form-name" value="contact">
             <label for="firstname">First Name</label>
             <input type="text" id="firstname" name="firstname" placeholder="Type your First name..">
@@ -250,6 +250,7 @@
             <textarea id="message" name="message" placeholder="Type your message.." style="height: 200px"></textarea>
             <input type="submit" value="Send">
           </form>
+          <div id="message-container"></div>
         </div>
       </div>
     </div>
