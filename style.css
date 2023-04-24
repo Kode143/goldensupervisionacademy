@@ -465,6 +465,7 @@ program section over here  */
   align-items: center;
   height: 200px;
   text-align: center;
+  padding-top: 40%;
 }
 
 /* media querry over here */
