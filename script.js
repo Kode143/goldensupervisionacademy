@@ -77,29 +77,23 @@ var responsiveSlider = function() {
   }
 
   // submiting contact form
-  document.querySelector('#contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var form = e.target;
-    var formData = new FormData(form);
-    fetch(form.action, {
+  const contactForm = document.getElementById('contact-form');
+  const thankYouMessage = document.getElementById('thank-you');
+  
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(contactForm);
+    
+    fetch('/', {
       method: 'POST',
-      headers: {
-        'Accept': 'application/json'
-      },
-      body: formData
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
     })
-    .then(function(response) {
-      if (response.ok) {
-        form.style.display = 'none';
-        document.querySelector('#contact-message').style.display = 'block';
-        documentquerySelector('#contact-message').style.backgroundcolor = 'blue';
-        documentquerySelector('#contact-message').style.color = 'green';
-      } else {
-        alert('An error occurred. Please try again.');
-      }
+    .then(() => {
+      contactForm.style.display = 'none';
+      thankYouMessage.style.display = 'block';
     })
-    .catch(function(error) {
+    .catch((error) => {
       console.error(error);
-      alert('An error occurred. Please try again.');
     });
   });
