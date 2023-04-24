@@ -75,3 +75,6 @@ var responsiveSlider = function() {
   window.onload = function() {
   responsiveSlider();  
   }
+
+  
+  

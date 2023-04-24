@@ -109,56 +109,75 @@
 </div>
 
 <!-- gallery item goes from here -->
-<div class="container-fluid">
-    <div class="row">
-      <!-- Photo Gallery Container -->
-      <div class="col-md-6 photo-gallery-container pe-2" style="background-image: url('https://via.placeholder.com/800x600');">
-        <h2 class="folder-name">Sample Photos</h2>
-        <div class="photo-gallery row">
-          <div class="col-md-4 mb-3">
-            <a href="https://drive.google.com/drive/folders/XXXXXXXXXXXX">
-              <img src="https://via.placeholder.com/400x300" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 mb-3">
-            <a href="https://drive.google.com/drive/folders/XXXXXXXXXXXX">
-              <img src="https://via.placeholder.com/400x300" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 mb-3">
-            <a href="https://drive.google.com/drive/folders/XXXXXXXXXXXX">
-              <img src="https://via.placeholder.com/400x300" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 mb-3">
-            <a href="https://drive.google.com/drive/folders/XXXXXXXXXXXX">
-              <img src="https://via.placeholder.com/400x300" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 mb-3">
-            <a href="https://drive.google.com/drive/folders/XXXXXXXXXXXX">
-              <img src="https://via.placeholder.com/400x300" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 mb-3">
-            <a href="https://drive.google.com/drive/folders/XXXXXXXXXXXX">
-              <img src="https://via.placeholder.com/400x300" class="img-fluid">
-            </a>
-          </div>
+<div class="container-fluid position-relative">
+  <div class="row">
+    <!-- Photo Gallery Container -->
+    <div class="col-md-6 photo-gallery-container pe-2 text-center">
+      <h2 class="folder-name">Sample Photos</h2>
+      <div class="photo-gallery row">
+        <div class="col-md-4 mb-3">
+          <a href="/assets/cute.jpg" target="_blank">
+            <img src="/assets/cute.jpg" class="img-fluid" alt="Cute photo" onclick="openImage(this)">
+          </a>
+        </div>
+        <div class="col-md-4 mb-3">
+          <a href="/assets/parents.jpg" target="_blank">
+            <img src="/assets/parents.jpg" class="img-fluid" alt="Parents photo" onclick="openImage(this)">
+          </a>
+        </div>
+        <div class="col-md-4 mb-3">
+          <a href="/assets/ralley.jpg" target="_blank">
+            <img src="/assets/ralley.jpg" class="img-fluid" alt="Rally photo" onclick="openImage(this)">
+          </a>
+        </div>
+        <div class="col-md-4 mb-3">
+          <a href="/assets/game.jpg" target="_blank">
+            <img src="/assets/game.jpg" class="img-fluid" alt="Game photo" onclick="openImage(this)">
+          </a>
+        </div>
+        <div class="col-md-4 mb-3">
+          <a href="/assets/dance.jpg" target="_blank">
+            <img src="/assets/dance.jpg" class="img-fluid" alt="Dance photo" onclick="openImage(this)">
+          </a>
+        </div>
+        <div class="col-md-4 mb-3">
+          <a href="/assets/bus.jpg" target="_blank">
+            <img src="/assets/bus.jpg" class="img-fluid" alt="Bus photo" onclick="openImage(this)">
+          </a>
         </div>
       </div>
-      
-      <!-- Video Gallery Container -->
-      <div class="col-md-6 video-gallery-container text-center" style="background-image: url('https://via.placeholder.com/800x600');">
-        <h2 class="folder-name">Sample videos</h2>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-          <img src="https://via.placeholder.com/800x450" class="img-fluid">
-        </a>
+      <a href="https://www.facebook.com/profile.php?id=100045764452801&sk=photos" target="_blank"><button type="button" class="btn btn-success border-5" >View All</button></a>
+    </div>
+
+    <!-- Video Gallery Container -->
+    <div class="col-md-6 video-gallery-container text-center">
+      <h2 class="folder-name">Sample videos</h2>
+      <video controls class="img-fluid">
+        <source src="/assets/video/birthday.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <a href="https://www.facebook.com/profile.php?id=100045764452801&sk=videos" target="_blank"><button type="button" class="btn btn-success border-5">View All</button></a>
+    </div>
+  </div>
+</div>
+    
+
+<!-- Modal for photo -->
+<!-- <div id="photoModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="" class="img-fluid" alt="">
       </div>
     </div>
   </div>
-  
-  
+</div> -->
 
 
   <!-- footer content over here -->
