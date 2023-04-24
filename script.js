@@ -92,6 +92,8 @@ var responsiveSlider = function() {
       if (response.ok) {
         form.style.display = 'none';
         document.querySelector('#contact-message').style.display = 'block';
+        documentquerySelector('#contact-message').style.backgroundcolor = 'blue';
+        documentquerySelector('#contact-message').style.color = 'green';
       } else {
         alert('An error occurred. Please try again.');
       }
