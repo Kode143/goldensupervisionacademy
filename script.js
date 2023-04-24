@@ -76,5 +76,24 @@ var responsiveSlider = function() {
   responsiveSlider();  
   }
 
-  
-  
+  // submiting contact form
+  function submitForm(event) {
+    event.preventDefault();
+    var form = document.forms['contact'];
+    var data = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', form.action);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        var messageContainer = document.getElementById('message-container');
+        if (xhr.status === 200) {
+          messageContainer.innerHTML = 'Message sent successfully!';
+          messageContainer.style.color = 'green';
+        } else {
+          messageContainer.innerHTML = 'Failed to send message. Please try again.';
+          messageContainer.style.color = 'red';
+        }
+      }
+    };
+    xhr.send(data);
+  }
