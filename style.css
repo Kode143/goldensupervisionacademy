@@ -459,7 +459,13 @@ program section over here  */
   
 }
 
-
+#thank-you {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  text-align: center;
+}
 
 /* media querry over here */
   @media (max-width: 991px) {
