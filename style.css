@@ -463,9 +463,9 @@ program section over here  */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 300px;
   text-align: center;
-  padding-top: 40%;
+  padding-top: 20%;
 }
 
 /* media querry over here */
