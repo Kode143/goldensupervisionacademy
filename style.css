@@ -348,7 +348,7 @@ notice bar over here */
 #slider {
   position: relative;
   float: left;
-  width: 100%;
+  width: 101%;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 20, 0, 5);
 }
@@ -592,6 +592,7 @@ program section over here  */
         top:50%;
         z-index:50;
       }
+      
       .contact-us{
         padding: 7px;
       }
@@ -604,6 +605,11 @@ program section over here  */
         padding-top: 10%;
         /* margin-top: 100px; */
       }
+      .container-fluid #slider{
+        padding-top: 50px;
+      
+      }
+      
       .photo-gallery-container{
         padding-top: 100px;
       }
