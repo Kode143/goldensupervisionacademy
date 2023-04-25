@@ -429,11 +429,23 @@ list-style: none;
 padding: 0;
 margin: 0;
 }
-input[type=text],
+input[type="tel"],
 select,
 textarea {
 width: 100%;
-padding: 8px;
+padding: 5px;
+border: 1px solid #eeeeee;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 8px;
+margin-bottom: 16px;
+resize: vertical;
+}
+input[type="text"],
+select,
+textarea {
+width: 100%;
+padding: 5px;
 border: 1px solid #eeeeee;
 border-radius: 4px;
 box-sizing: border-box;
@@ -522,17 +534,19 @@ program section over here  */
     
     .navbar-nav{
         margin-top: auto;
-        padding-top: 7%;
+        padding-top: 3%;
         position: relative;
         background-color: rgb(65, 83, 83);
         align-items: center;
-        height: 95vh;
+        height: 90vh;
         width: 100%;
     }
     .navbar-nav .nav-item .nav-link{
       position: relative;
       color: blanchedalmond;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: 'Josefin Sans', sans-serif;
+      padding: 10px;
+      margin: 10px;
     }
     /* Style the logo text */
     .logotext-golden {
@@ -550,7 +564,7 @@ program section over here  */
        }
        .text-large{
         font-size: xx-large;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
         font-weight: 600;
         }
       
@@ -568,7 +582,7 @@ program section over here  */
         font-size: 1.4rem;
         line-height: 0;
         color: #333;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
         text-align: center;
     }
  
