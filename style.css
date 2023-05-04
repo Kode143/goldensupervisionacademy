@@ -229,6 +229,18 @@ notice bar over here */
       border:12px solid transparent;
       border-left-color:#ffd800
   }
+  /* Center the Toastify message */
+.toastify {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Adjust the size of the Toastify message */
+.toastify > .toastify-content {
+  font-size: 40px;
+  padding: 20px;
+}
+
   /* Success message */
 .success-toast {
   background-color: #00b09b;
