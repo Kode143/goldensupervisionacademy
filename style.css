@@ -229,6 +229,16 @@ notice bar over here */
       border:12px solid transparent;
       border-left-color:#ffd800
   }
+  /* Success message */
+.success-toast {
+  background-color: #00b09b;
+}
+
+/* Error message */
+.error-toast {
+  background-color: #e74c3c;
+}
+
   .notice-text{
       position:absolute;
       width:100%;
