@@ -78,24 +78,36 @@ var responsiveSlider = function() {
 
   // submiting contact form
   const contactForm = document.getElementById('contact-form');
-  const thankYouMessage = document.getElementById('thank-you');
-  
+
+  // Add an event listener for form submission
   contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const formData = new FormData(contactForm);
-    
+    event.preventDefault(); // Prevent the default form submission behavior
+  
+    // Send a POST request to the Netlify server
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
+      body: new URLSearchParams(new FormData(contactForm)).toString()
     })
     .then(() => {
-      contactForm.style.display = 'none';
-      thankYouMessage.style.display = 'block';
-      thankYouMessage.style.height = '400px';
-      
+      // Show a success message using Toastify
+      Toastify({
+        text: 'Thank you for contacting us!',
+        backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
+        className: 'success-toast'
+      }).showToast();
+  
+      // Reset the form
+      contactForm.reset();
     })
     .catch((error) => {
       console.error(error);
+      // Show an error message using Toastify
+      Toastify({
+        text: 'An error occurred while sending the message. Please try again later.',
+        backgroundColor: 'linear-gradient(to right, #e74c3c, #c0392b)',
+        className: 'error-toast'
+      }).showToast();
     });
   });
+  
