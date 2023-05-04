@@ -79,23 +79,48 @@ var responsiveSlider = function() {
   // submiting contact form
   const contactForm = document.getElementById('contact-form');
   const thankYouMessage = document.getElementById('thank-you');
+  const submitButton = document.getElementById('submit-button');
   
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(contactForm);
-    
+  
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString()
     })
     .then(() => {
-      contactForm.style.display = 'none';
+      // Display success message
       thankYouMessage.style.display = 'block';
-      thankYouMessage.style.height = '400px';
-      
+  
+      // Reset form fields
+      contactForm.reset();
+  
+      // Show toast notification
+      Toastify({
+        text: "Thanks For Contacting Us!!!",
+        duration: 3000,
+        gravity: "top",
+        position: "center",
+        backgroundColor: "#4CAF50",
+        stopOnFocus: true
+      }).showToast();
+  
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        thankYouMessage.style.display = 'none';
+      }, 5000);
     })
     .catch((error) => {
       console.error(error);
     });
   });
+  
+  // Enable submit button after all required fields are filled
+  contactForm.addEventListener('input', () => {
+    const requiredFields = contactForm.querySelectorAll('[required]');
+    const isFormValid = Array.from(requiredFields).every((field) => field.value.trim() !== '');
+    submitButton.disabled = !isFormValid;
+  });
+  
