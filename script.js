@@ -92,7 +92,7 @@ var responsiveSlider = function() {
     .then(() => {
       // Show a success message using Toastify
       Toastify({
-        text: 'Your message has been Sent!! Thank you for contacting us!',
+        text: 'Your message has been Sent.\n Thank you for contacting us.',
         position: 'top-center',
        autoClose: 5000,
         backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
