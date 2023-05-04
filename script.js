@@ -92,7 +92,9 @@ var responsiveSlider = function() {
     .then(() => {
       // Show a success message using Toastify
       Toastify({
-        text: 'Thank you for contacting us!',
+        text: 'Your message has been Sent!! Thank you for contacting us!',
+        position: 'top-center',
+       autoClose: 5000,
         backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
         className: 'success-toast'
       }).showToast();
@@ -105,6 +107,8 @@ var responsiveSlider = function() {
       // Show an error message using Toastify
       Toastify({
         text: 'An error occurred while sending the message. Please try again later.',
+        position: 'top-center',
+        autoClose: 5000,
         backgroundColor: 'linear-gradient(to right, #e74c3c, #c0392b)',
         className: 'error-toast'
       }).showToast();
