@@ -230,16 +230,23 @@ notice bar over here */
       border-left-color:#ffd800
   }
   /* Center the Toastify message */
+/* Center the Toastify message */
 .toastify {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 50%;
-  left: 80%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
+
 /* Adjust the size of the Toastify message */
 .toastify > .toastify-content {
-  font-size: 20px;
-  padding: 20px;
+  font-size: 30px;
+  padding: 40px;
 }
+
 
   /* Success message */
 .success-toast {
